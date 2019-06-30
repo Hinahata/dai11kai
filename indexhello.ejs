@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta thhp-equiv="content-type"
+        content="text/html; charset=UTF-8">
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <head>
+            <h1><%= title %></h1>
+        </head>
+        <div role="main">
+            <p><%- content %></p>
+            <table><% for(let i in result){ %>
+                <tr>
+                <% let obj= result[i]; %>
+                <% console.log(obj); %>
+                <th><%= obj.id.value %></th>
+                <td><%= obj.name.value %></td>
+                <td><%= obj.mail.value %></td>
+                <td><%= obj.age.value %></td>
+            </tr>
+        <% } %></table>
+        </div>
+    </body>
+</html>
